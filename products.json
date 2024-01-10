@@ -1,0 +1,38 @@
+[
+{
+    "model": "product.product",
+    "pk": 1,
+    "fields": {
+        "create_at": "2023-12-28T11:54:31.415Z",
+        "updated_at": "2023-12-28T11:54:31.415Z",
+        "name": "Rubber",
+        "sku": "RUB001",
+        "price": 2000,
+        "discounted_price": 1600
+    }
+},
+{
+    "model": "product.product",
+    "pk": 2,
+    "fields": {
+        "create_at": "2023-12-28T11:54:54.916Z",
+        "updated_at": "2023-12-28T11:56:58.592Z",
+        "name": "Pencil",
+        "sku": "PENC001",
+        "price": 40,
+        "discounted_price": 30
+    }
+},
+{
+    "model": "product.product",
+    "pk": 3,
+    "fields": {
+        "create_at": "2024-01-08T12:36:29.764Z",
+        "updated_at": "2024-01-08T12:36:29.765Z",
+        "name": "ERASER",
+        "sku": "ERA001",
+        "price": 5,
+        "discounted_price": 3
+    }
+}
+]

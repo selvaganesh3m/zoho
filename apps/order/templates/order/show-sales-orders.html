@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Orders</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sales Orders</h1>
+    <button><a href="{% url 'order:add-sales-order' %}">Add Sales Orders</a></button>
+    <button><a href="{% url 'order:generate-invoice-sales-order' %}">Generate Invoice</a></button>
+    <table>
+        <tr>
+            <th>Customer</th>
+            <th>Order Status</th>
+            <th>Products</th>
+            <th>Invoice</th>
+        </tr>
+        {% for order in sales_orders %}
+        <tr>
+
+            <td>{{ order.customer }}</td>
+            <td>{{ order.get_status_display }}</td>
+            <td>
+            {% for product in order.products.all %}
+                {{ product.name }}<br>
+            {% endfor %}
+            </td>
+            {% if order.invoice %}
+            <td>
+                <button class="button" type="submit"><a href="{{order.invoice.url}}">Print Invoice</a></button>
+            </td>
+            {% else %}
+            <td>
+                Invoice not generated
+            </td>
+            {% endif %}
+            {% endfor %}
+        </tr>
+    </table>
+    <script>
+        function printInvoice() {
+            // Create a new window or tab
+            var printWindow = window.open('', '_blank');
+    
+            // Populate the new window with the content you want to print
+            printWindow.document.write('<html><head><title>Invoice</title></head><body>');
+    
+            // Add your invoice content here
+            printWindow.document.write('<h1>Invoice Content</h1>');
+            // Add more content as needed
+    
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+    
+            // Print the new window
+            printWindow.print();
+        }
+    </script>
+</body>
+</html>

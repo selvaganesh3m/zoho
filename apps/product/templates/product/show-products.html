@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Active Products</title>
+</head>
+<body>
+    <h1>List of Active Products</h1>
+    <button><a href="{% url 'product:add-product' %}">Add product</a></button>
+    <ul>
+        {% for product in products %}
+            <li>{{ product }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

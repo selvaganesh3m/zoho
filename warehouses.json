@@ -1,0 +1,96 @@
+[
+{
+    "model": "warehouse.warehouse",
+    "pk": 1,
+    "fields": {
+        "create_at": "2023-12-28T10:40:12.168Z",
+        "updated_at": "2023-12-28T10:40:12.168Z",
+        "name": "DALLAS 01",
+        "location": "TEXAS"
+    }
+},
+{
+    "model": "warehouse.warehouse",
+    "pk": 2,
+    "fields": {
+        "create_at": "2023-12-28T10:40:23.851Z",
+        "updated_at": "2023-12-28T10:40:23.851Z",
+        "name": "DALLAS 02",
+        "location": "TEXAS"
+    }
+},
+{
+    "model": "warehouse.warehouse",
+    "pk": 3,
+    "fields": {
+        "create_at": "2023-12-28T10:53:13.076Z",
+        "updated_at": "2023-12-28T11:04:42.951Z",
+        "name": "DALLAS 03",
+        "location": "TEXAS"
+    }
+},
+{
+    "model": "warehouse.warehouse",
+    "pk": 4,
+    "fields": {
+        "create_at": "2023-12-28T10:53:30.609Z",
+        "updated_at": "2023-12-28T11:04:35.386Z",
+        "name": "DALLAS 04",
+        "location": "TEXAS"
+    }
+},
+{
+    "model": "warehouse.warehouse",
+    "pk": 5,
+    "fields": {
+        "create_at": "2024-01-08T12:37:33.766Z",
+        "updated_at": "2024-01-08T12:38:59.320Z",
+        "name": "SUNNYVALE 01",
+        "location": "CALIFORNIA"
+    }
+},
+{
+    "model": "warehouse.warehousestock",
+    "pk": 1,
+    "fields": {
+        "create_at": "2024-01-08T13:07:21.751Z",
+        "updated_at": "2024-01-08T13:09:07.619Z",
+        "warehouse": 1,
+        "product": 1,
+        "quantity": 12
+    }
+},
+{
+    "model": "warehouse.warehousestock",
+    "pk": 2,
+    "fields": {
+        "create_at": "2024-01-08T13:09:17.185Z",
+        "updated_at": "2024-01-08T13:11:24.376Z",
+        "warehouse": 1,
+        "product": 2,
+        "quantity": 7
+    }
+},
+{
+    "model": "warehouse.warehousestock",
+    "pk": 3,
+    "fields": {
+        "create_at": "2024-01-08T13:14:08.970Z",
+        "updated_at": "2024-01-08T13:14:08.971Z",
+        "warehouse": 5,
+        "product": 2,
+        "quantity": 1
+    }
+},
+{
+    "model": "warehouse.warehousestock",
+    "pk": 4,
+    "fields": {
+        "create_at": "2024-01-08T13:14:18.287Z",
+        "updated_at": "2024-01-08T13:14:18.287Z",
+        "warehouse": 5,
+        "product": 3,
+        "quantity": 4
+    }
+}
+]

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Warehouse Stocks</title>
+</head>
+
+<body>
+    <h1>Warehouse Stocks</h1>
+    <button><a href="{% url 'warehouse:add-stocks' %}">Add Stocks</a></button>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background-color: coral;
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <h2>Warehouse Stocks</h2>
+
+        <table>
+            <tr>
+                <th>Location</th>
+                <th>Product</th>
+                <th>Quantity</th>
+            </tr>
+            {% for stocks in warehouse_stocks %}
+            <tr>
+
+                <td>{{ stocks.warehouse.name }}</td>
+                <td>{{ stocks.product.name }}</td>
+                <td>{{ stocks.quantity }}</td>
+                {% endfor %}
+            </tr>
+        </table>
+    </body>
+
+</html>
